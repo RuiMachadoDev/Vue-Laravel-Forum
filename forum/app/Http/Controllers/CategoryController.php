@@ -14,6 +14,6 @@ class CategoryController extends Controller
 
     public function show(Category $category)
     {
-        return response()->json($category);
+        return $category->load('topics.user');;
     }
 }
